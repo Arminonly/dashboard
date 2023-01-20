@@ -1,6 +1,7 @@
-import { Avatar, Rate, Space, Table, Typography } from 'antd';
+import { Avatar, Space, Table, Typography } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { getCustomers } from '../../API/ApiIndex';
+import {columns} from './columns';
 
 export default function Customers() {
   const [loading, setLoading] = useState(false);
@@ -20,43 +21,7 @@ export default function Customers() {
       <Typography.Title level={4}>Customers</Typography.Title>
       <Table
         loading={loading}
-        const
-        columns={[
-          {
-            title: 'Photo',
-            dataIndex: 'image',
-            render: link => {
-              return <Avatar src={link} />;
-            }
-          },
-          {
-            title: 'FirstName',
-            dataIndex: 'firstName'
-          },
-          {
-            title: 'LastName',
-            dataIndex: 'price'
-          },
-          {
-            title: 'E-mail',
-            dataIndex: 'email'
-          },
-          {
-            title: 'Phone',
-            dataIndex: 'phone'
-          },
-          {
-            title: 'Address',
-            dataIndex: 'address',
-            render: (address) => {
-              return (
-                <span>
-                  {' '}{address.address}, {address.city}
-                </span>
-              );
-            }
-          }
-        ]}
+        columns={columns}
         dataSource={dataSource}
         pagination={{
             pageSize:5
