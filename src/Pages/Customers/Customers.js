@@ -1,4 +1,4 @@
-import { Avatar, Space, Table, Typography } from 'antd';
+import { Space, Table, Typography } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { getCustomers } from '../../API/ApiIndex';
 import {columns} from './columns';

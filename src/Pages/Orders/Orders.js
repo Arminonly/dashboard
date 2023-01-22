@@ -1,6 +1,7 @@
 import { Space, Table, Typography } from 'antd';
 import React, { useState, useEffect } from 'react';
 import { getOrders } from '../../API/ApiIndex';
+import { columns } from './columns';
 
 export default function Orders() {
   const [loading, setLoading] = useState(false);
@@ -20,37 +21,7 @@ export default function Orders() {
       <Typography.Title level={4}>Orders</Typography.Title>
       <Table
         loading={loading}
-        const
-        columns={[
-          {
-            title: 'Title',
-            dataIndex: 'title'
-          },
-          {
-            title: 'Price',
-            dataIndex: 'price',
-            render: value =>
-              <span>
-                ${value}
-              </span>
-          },
-          {
-            title: 'DiscountedPrice',
-            dataIndex: 'discountedPrice',
-            render: value =>
-              <span>
-                ${value}
-              </span>
-          },
-          {
-            title: 'Quantity',
-            dataIndex: 'quantity'
-          },
-          {
-            title: 'Total',
-            dataIndex: 'total'
-          }
-        ]}
+        columns={columns}
         dataSource={dataSource}
         pagination={false}
       />
