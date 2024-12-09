@@ -3,7 +3,7 @@ import AppRoutes from '../AppRoutes/AppRoutes';
     
     export default function PageContent(){
             return (
-            <div с>
+            <div >
                <AppRoutes/>
             </div>
         );

@@ -65,7 +65,7 @@ export default function AppHeader() {
           renderItem={item => {
             return (
               <List.Item>
-                <Typography.Text strong>{item.title}</Typography.Text>has been
+                <Typography.Text strong>{item.title}</Typography.Text> has been
                 ordered!!!
               </List.Item>
             );

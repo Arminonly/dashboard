@@ -14,7 +14,7 @@ export  const columns = [
   },
   {
     title: 'LastName',
-    dataIndex: 'price'
+    dataIndex: 'lastName'
   },
   {
     title: 'E-mail',
